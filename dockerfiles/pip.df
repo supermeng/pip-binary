@@ -1,0 +1,12 @@
+FROM    laincloud/centos-lain:20160503
+
+RUN     pip install --upgrade pip
+RUN     pip install wheel
+RUN     mkdir wheelhouse
+WORKDIR wheelhouse
+RUN     pip wheel pip
+RUN     pip wheel docker-py==1.8.0
+RUN     pip wheel python-etcd==0.4.3
+RUN     pip wheel python-dateutil==2.5.2
+RUN     pip wheel psutil==4.1.0
+RUN     pip wheel requests==2.9.1
