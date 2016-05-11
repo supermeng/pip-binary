@@ -1,6 +1,6 @@
 FROM    laincloud/centos-lain:20160503
 
-RUN     pip install --upgrade pip
+RUN     pip --default-timeout=100 install -U pip
 RUN     pip install wheel
 RUN     mkdir wheelhouse
 WORKDIR wheelhouse
